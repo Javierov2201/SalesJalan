@@ -9,7 +9,7 @@ ga = None
 iteration = 0
 
 class Chromosome:
-    def __init__(self, size, mutation_probability = 10, data = [0]):
+    def __init__(self, size, mutation_probability = 0.75, data = [0]):
         if data == [0]:
             self.data = data
             for i in range(size-1):
