@@ -8,6 +8,7 @@ w = None
 ga = None
 iteration = 0
 
+# mutation probability equals to 0.75 to avoid crossed path
 class Chromosome:
     def __init__(self, size, mutation_probability = 0.75, data = [0]):
         if data == [0]:
@@ -74,7 +75,7 @@ class GA:
             self.best = self.get_best().data
         self.crossover()
         self.mutation()
-        for i in self.population:
+        for i in self.population:                                                                                                                                                                                                                                                           
             if i.life_time > self.max_life_time:
                 self.population.remove(i)
             else:
