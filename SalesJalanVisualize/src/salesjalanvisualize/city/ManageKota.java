@@ -16,28 +16,19 @@ public class ManageKota {
     private static final ManageKota instance = new ManageKota();
     private final ArrayList<Kota> cities;
     
-     public static ManageKota getInstance() {
-        return instance;
-    }
+     public static ManageKota getInstance() { return instance; }
 
-    private ManageKota() {
-        cities = new ArrayList<>();
-    }
+    private ManageKota() { cities = new ArrayList<>(); }
+    
     // Holds the cities
 
     // To add the cities destination
-    public void addKota(Kota kota) {
-        cities.add(kota);
-    }
+    public void addKota(Kota kota) { cities.add(kota); }
 
     // Getting the city
-    public Kota getCity(int index) {
-        return cities.get(index);
-    }
+    public Kota getKota(int index) { return cities.get(index); }
 
     // Get the number of destination cities
-    public int numberOfCities() {
-        return cities.size();
-    }
+    public int numberOfKota() { return cities.size(); }
     
 }
