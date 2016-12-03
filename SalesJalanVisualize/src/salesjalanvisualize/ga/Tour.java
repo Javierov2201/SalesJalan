@@ -99,10 +99,11 @@ public class Tour implements Comparable<Tour> {
         if (Double.doubleToLongBits(this.fitness) != Double.doubleToLongBits(other.fitness)) {
             return false;
         }
-        if (this.distance != other.distance) {
-            return false;
-        }
-        return true;
+//        if (this.distance != other.distance) {
+//            return false;
+//        }
+//        return true;
+        return this.distance == other.distance;
     }
 
     @Override
