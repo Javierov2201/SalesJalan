@@ -8,9 +8,9 @@ w = None
 ga = None
 iteration = 0
 
-# mutation probability equals to 0.75 to avoid crossed path
+# mutation probability equals to 0.85 to avoid crossed path
 class Chromosome:
-    def __init__(self, size, mutation_probability = 0.75, data = [0]):
+    def __init__(self, size, mutation_probability = 0.65, data = [0]):
         if data == [0]:
             self.data = data
             for i in range(size-1):
@@ -39,7 +39,8 @@ class Chromosome:
                 child2.append(i)
         child2.append(0)
         return child1, child2
-
+        
+    #ini fungsi mutasi
     def mutation(self):
         if randint(0, 100) <= self.mutation_probability:
             index1 = randint(1, len(self.data)-2)
